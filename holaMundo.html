@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/estilos.css" type="text/css">
+        <script type="text/javascript" >
+            function checkDNI() {
+                var dni = document.getElementById("dni").value;
+
+                numero = dni.substr(0, dni.length - 1);
+                letraDni = dni.substr(dni.length - 1, 1);
+                numero = numero % 23;
+                letra = 'TRWAGMYFPDXBNJZSQVHLCKET';
+                letra = letra.substring(numero, numero + 1);
+
+                if (letra !== letraDni) {
+                    alert("Dni erróneo");
+                } else {
+                    alert("Todo correcto");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <!--<div>
+            <input type="text" id="dni" name="dni" size="30">
+            <button onclick="checkDNI()">Comprobar</button>
+        </div>-->
+        <h1 class="titulo">Eurocopa Francia 2016</h1>
+        <h2 class="grupo">Grupo D</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th class="puntos">Puntos</th>
+                    <th>PJ</th>
+                    <th>PG</th>
+                    <th>PE</th>
+                    <th>PP</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="nombre-equipo"><img src="imagenes/esp.svg" width="21px" height="21px"> España</td>
+                    <td class="columnaPuntos">1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td class="nombre-equipo"><img src="imagenes/cro.svg"  width="21px" height="21px"> Croacia</td>
+                    <td class="columnaPuntos">1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td class="nombre-equipo"><img src="imagenes/tur.svg"  width="21px" height="21px"> Turquía</td>
+                    <td class="columnaPuntos">1</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td class="nombre-equipo"><img src="imagenes/cze.svg"  width="21px" height="21px"> República Checa</td>
+                    <td class="columnaPuntos">1</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>1</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
